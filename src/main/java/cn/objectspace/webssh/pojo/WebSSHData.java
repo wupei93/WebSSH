@@ -14,6 +14,15 @@ public class WebSSHData {
     private String username;
     private String password;
     private String command = "";
+    private String initCmd = "";
+
+    public String getInitCmd() {
+        return initCmd;
+    }
+
+    public void setInitCmd(String initCmd) {
+        this.initCmd = initCmd;
+    }
 
     public String getOperate() {
         return operate;

@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>WebSSH</title>
+    <title>[[${title}]]</title>
     <link rel="stylesheet" href="../css/xterm.css" />
 </head>
 <body>
@@ -12,11 +12,12 @@
 <script src="../js/webssh.js" charset="utf-8"></script>
 <script>
     openTerminal( {
-        /*operate:'connect',
-        host: '',//IP
-        port: '',//端口号
-        username: '',//用户名
-        password: ''//密码*/
+        operate:'connect',
+        host: '10.247.99.222',//IP
+        port: '22',//端口号
+        username: 'root',//用户名
+        password: 'ChangeMe',//密码
+        initCmd: '[[${initCmd}]]'
     });
     function openTerminal(options){
         var client = new WSSHClient();

@@ -157,7 +157,7 @@ public class WebSSHServiceImpl implements WebSSHService {
         sshConnectInfo.setChannel(channel);
 
         //转发消息
-        transToSSH(channel, "\r");
+        transToSSH(channel, webSSHData.getInitCmd()+ "\r");
 
         //读取终端返回的信息流
         InputStream inputStream = channel.getInputStream();
